@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Paint.IO</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+	<span>
+		<div id="control">
+            <form action="">
+                <ul>
+                    <li>Pen Colour:<input id="color" type="color" name="color"/></li>
+                    <br>
+                    <li>Pen Size:<input id="size" type="number" min="1" max="10" value="3" name="pen size" /></li>
+                </ul>
+            </form>
+        </div>
+
+		<div id="chat">
+            <ul id="messages"></ul>
+            <form action="">
+                <input id="chatinput" autocomplete="off" /><button id="chatbutton">Send</button>
+            </form>
+        </div>
+
+		<div id="wrapper">
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+	</span>
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="socket.io.js"></script>
+	<script src="client.js"></script>
+
+  </body>
+</html>
